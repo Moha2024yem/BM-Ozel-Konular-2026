@@ -1,0 +1,15 @@
+2026-01-10 20:20:09 [[32minfo[39m]: DB connection OK
+2026-01-10 20:20:09 [[32minfo[39m]: Server listening on port 3000
+2026-01-10 20:20:33 [[32minfo[39m] [d1bf5e61-cac0-4f99-a254-e76c5a5e3531]: Incoming request {"method":"GET","url":"/api/customers/1","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+2026-01-10 20:20:33 [[33mwarn[39m] [d1bf5e61-cac0-4f99-a254-e76c5a5e3531]: Request completed {"method":"GET","url":"/api/customers/1","statusCode":404,"duration":"17ms"}
+2026-01-10 20:20:37 [[32minfo[39m] [36295796-fed7-488b-8235-1b3650109db6]: Incoming request {"method":"GET","url":"/api/customers","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+2026-01-10 20:20:37 [[32minfo[39m] [36295796-fed7-488b-8235-1b3650109db6]: Request completed {"method":"GET","url":"/","statusCode":200,"duration":"73ms"}
+2026-01-10 20:21:11 [[32minfo[39m]: DB connection OK
+2026-01-10 20:21:11 [[32minfo[39m]: Server listening on port 3000
+2026-01-10 20:25:28 [[32minfo[39m] [c4fbe368-0668-43c3-9404-1fccafd8b795]: Incoming request {"method":"GET","url":"/api/customers","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-10 20:25:28 [[32minfo[39m] [c4fbe368-0668-43c3-9404-1fccafd8b795]: Request completed {"method":"GET","url":"/","statusCode":200,"duration":"67ms"}
+2026-01-10 20:26:04 [[32minfo[39m] [8467a413-b34f-4af9-a7da-e4b6b727700b]: Incoming request {"method":"GET","url":"/api/customers","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-10 20:26:04 [[32minfo[39m] [8467a413-b34f-4af9-a7da-e4b6b727700b]: Request completed {"method":"GET","url":"/","statusCode":200,"duration":"52ms"}
+2026-01-10 20:34:55 [[32minfo[39m] [f6ab8d56-cba6-4f9b-9986-5c21a96f0c72]: Incoming request {"method":"POST","url":"/api/customers","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-10 20:34:55 [[32minfo[39m]: Creating customer {"payload":{"firstName":"Mohammed","lastName":"Ali","phone":"+905551112233","email":"mohammed.ali@test.com","address":"Istanbul"}}
+2026-01-10 20:34:55 [[32minfo[39m] [f6ab8d56-cba6-4f9b-9986-5c21a96f0c72]: Request completed {"method":"POST","url":"/","statusCode":201,"duration":"66ms"}
