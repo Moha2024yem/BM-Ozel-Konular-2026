@@ -1,16 +1,17 @@
 const { Sequelize } = require('sequelize');
-const config = require('../config');
+const env = process.env.NODE_ENV || 'development';
+const dbConfig = require('../config/database')[env];
 const logger = require('../lib/logger');
 
 const sequelize = new Sequelize(
-  config.db.database,
-  config.db.username,
-  config.db.password,
+  dbConfig.database,
+  dbConfig.username,
+  dbConfig.password,
   {
-    host: config.db.host,
-    port: config.db.port,
-    dialect: config.db.dialect,
-    logging: msg => logger.debug(msg) // TODO: test ortamında kapatılmalı
+    host: dbConfig.host,
+    port: dbConfig.port,
+    dialect: dbConfig.dialect,
+    logging: env === 'test' ? false : msg => logger.debug(msg)
   }
 );
 
@@ -23,7 +24,7 @@ db.sequelize = sequelize;
 db.Customer = require('./customer')(sequelize, Sequelize.DataTypes);
 db.Order = require('./order')(sequelize, Sequelize.DataTypes);
 
-// İlişkiler (tam bitmemiş)
+// İlişkiler
 db.Customer.hasMany(db.Order, { foreignKey: 'customerId' });
 db.Order.belongsTo(db.Customer, { foreignKey: 'customerId' });
 

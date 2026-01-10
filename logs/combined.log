@@ -13,3 +13,9 @@
 2026-01-10 20:34:55 [[32minfo[39m] [f6ab8d56-cba6-4f9b-9986-5c21a96f0c72]: Incoming request {"method":"POST","url":"/api/customers","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
 2026-01-10 20:34:55 [[32minfo[39m]: Creating customer {"payload":{"firstName":"Mohammed","lastName":"Ali","phone":"+905551112233","email":"mohammed.ali@test.com","address":"Istanbul"}}
 2026-01-10 20:34:55 [[32minfo[39m] [f6ab8d56-cba6-4f9b-9986-5c21a96f0c72]: Request completed {"method":"POST","url":"/","statusCode":201,"duration":"66ms"}
+2026-01-11 00:02:25 [[32minfo[39m]: DB connection OK
+2026-01-11 00:02:25 [[32minfo[39m]: Server listening on port 3000
+2026-01-11 00:02:32 [[32minfo[39m] [fbc73f41-ba21-482b-ad28-c0b4c15749e5]: Incoming request {"method":"GET","url":"/api/customers","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+2026-01-11 00:02:32 [[32minfo[39m] [fbc73f41-ba21-482b-ad28-c0b4c15749e5]: Request completed {"method":"GET","url":"/","statusCode":200,"duration":"23ms"}
+2026-01-11 00:04:56 [[32minfo[39m]: DB connection OK
+2026-01-11 00:04:56 [[32minfo[39m]: Server listening on port 3000

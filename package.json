@@ -9,6 +9,9 @@
     "test": "jest --runInBand",
     "migrate": "npx sequelize-cli db:migrate"
   },
+    "jest": {
+    "setupFilesAfterEnv": ["<rootDir>/tests/setup.js"]
+  },
   "dependencies": {
     "express": "^4.19.0",
     "sequelize": "^6.37.0",
