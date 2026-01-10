@@ -1,3 +1,6 @@
+// Sequelize CLI yapılandırması:
+// Migration, model ve config dosyalarının özel klasörlerden okunmasını sağlar.
+
 const path = require('path');
 
 module.exports = {
