@@ -16,6 +16,22 @@ const { isValidEmail, normalizePhone, sanitizeName } = require('../src/utils/val
 const logger = require('../src/lib/logger');
 
 
+// BOM (Byte Order Mark) karakterini temizle
+// Problem: Windows'ta oluşturulan CSV dosyaları UTF-8 BOM içerebilir
+// Bu karakter kolon isimlerinin başına eklenir ve eşleşmeyi bozar
+function removeBOM(content) {
+    // UTF-8 BOM: 0xEF 0xBB 0xBF veya JavaScript'te \uFEFF
+    if (content.charCodeAt(0) === 0xFEFF) {
+        return content.slice(1);
+    }
+    // Alternatif BOM formatı
+    if (content.startsWith('\ufeff')) {
+        return content.slice(1);
+    }
+    return content;
+}
+
+
 //CSV dosyasından müşteri verileriini import eder
 
 async function importCustomers(csvFilePath) {
@@ -23,7 +39,11 @@ async function importCustomers(csvFilePath) {
     console.log(`CSV Dosyası: ${csvFilePath}\n`);
 
     // CSV dosyasını okumak
-    const fileContent = fs.readFileSync(csvFilePath, 'utf-8');
+    let fileContent = fs.readFileSync(csvFilePath, 'utf-8');
+
+    // BOM karakterini temizle (Windows CSV dosyaları için gerekli)
+    fileContent = removeBOM(fileContent);
+
     const records = parse(fileContent, {
         columns: true,
         skip_empty_lines: true,
