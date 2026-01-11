@@ -226,10 +226,11 @@ function generateReport(results) {
 
 // Script çalıştırma
 if (require.main === module) {
-    const csvFile = process.argv[2] || 'customers_raw_ordered.csv';
+    const csvFile = process.argv[2] || 'data/customers_raw_ordered.csv';
 
     if (!fs.existsSync(csvFile)) {
         console.error(`! Hata: CSV dosyası bulunamadı: ${csvFile}`);
+        console.log(`\nİpucu: CSV dosyalarını 'data/' klasörüne koyun.`);
         process.exit(1);
     }
 

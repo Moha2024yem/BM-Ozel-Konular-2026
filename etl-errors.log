@@ -1,0 +1,119 @@
+ETL Hata Raporu
+Tarih: 2026-01-11T12:24:18.278Z
+================================================================================
+
+ÖZET:
+- Toplam kayıt: 20
+- Başarılı: 0
+- Başarısız: 20
+- Duplicate: 0
+
+================================================================================
+
+HATALI KAYITLAR:
+
+1. Satır 2:
+   Veri: {"﻿Ad":"Ahmet","Soyad":"Yilmaz","Telefon":"+90 532 111 22 33","Email":"ahmet.yilmaz@mail.com","Adres":"Istanbul, Kadikoy","Not":""}
+   Hatalar:
+   - First name is required
+
+2. Satır 3:
+   Veri: {"﻿Ad":"Mehmet Ali","Soyad":"","Telefon":"05321112233","Email":"","Adres":"Ankara","Not":"Soyadi yok"}
+   Hatalar:
+   - First name is required
+
+3. Satır 4:
+   Veri: {"﻿Ad":"Ayşe","Soyad":"KARA","Telefon":"5321112233","Email":"ayse.kara@mail","Adres":"","Not":"Email hatali"}
+   Hatalar:
+   - First name is required
+   - Invalid email format: ayse.kara@mail
+
+4. Satır 5:
+   Veri: {"﻿Ad":"Hasan","Soyad":"Demir","Telefon":"+90532 1112233","Email":"hasan.demir@mail.com","Adres":"Izmir","Not":""}
+   Hatalar:
+   - First name is required
+
+5. Satır 6:
+   Veri: {"﻿Ad":"Hakan A.","Soyad":"Çelik","Telefon":"905321112233","Email":"hakan.celik@gmail.com","Adres":"Istanbul","Not":""}
+   Hatalar:
+   - First name is required
+
+6. Satır 7:
+   Veri: {"﻿Ad":"Fatma Nur","Soyad":"Yilmaz","Telefon":"0 532 111 22 33","Email":"","Adres":"Adana","Not":"Duplicate olabilir"}
+   Hatalar:
+   - First name is required
+
+7. Satır 8:
+   Veri: {"﻿Ad":"fatma nur","Soyad":"yilmaz","Telefon":"+90 (532) 111 2233","Email":"fatma@mail.com","Adres":"Adana","Not":"Ayni kisi mi?"}
+   Hatalar:
+   - First name is required
+
+8. Satır 9:
+   Veri: {"﻿Ad":"","Soyad":"Doğan","Telefon":"532---111---2233","Email":"dogan@mail.com","Adres":"Bursa","Not":"Adi bos"}
+   Hatalar:
+   - First name is required
+
+9. Satır 10:
+   Veri: {"﻿Ad":"Elif","Soyad":"","Telefon":"1112233","Email":"elif@mail.com","Adres":"Istanbul","Not":"Telefon eksik"}
+   Hatalar:
+   - First name is required
+   - Invalid phone format: 1112233
+
+10. Satır 11:
+   Veri: {"﻿Ad":"Ali","Soyad":"Öztürk","Telefon":"+90 555 444 3322","Email":"","Adres":"","Not":""}
+   Hatalar:
+   - First name is required
+
+11. Satır 12:
+   Veri: {"﻿Ad":"Ali","Soyad":"Ozturk","Telefon":"+90 555 444 3322","Email":"ali.ozturk@mail.com","Adres":"","Not":"Duplicate supheli"}
+   Hatalar:
+   - First name is required
+
+12. Satır 13:
+   Veri: {"﻿Ad":"\"Merve\"","Soyad":"Kaya","Telefon":"0532-111-22-33","Email":"mervekaya@mail.com","Adres":"Manisa","Not":"Ad alaninda tirnak var"}
+   Hatalar:
+   - First name is required
+
+13. Satır 14:
+   Veri: {"﻿Ad":"Murat","Soyad":"Sahin","Telefon":"+90 532 1112233","Email":"","Adres":"Konya","Not":"Email eksik"}
+   Hatalar:
+   - First name is required
+
+14. Satır 15:
+   Veri: {"﻿Ad":"Ahmet","Soyad":"Yilmaz","Telefon":"+905321112233","Email":"ahmet.yilmaz@mail.com","Adres":"Istanbul","Not":"Ayni kisi mi kontrol"}
+   Hatalar:
+   - First name is required
+
+15. Satır 16:
+   Veri: {"﻿Ad":"Caner","Soyad":"Taş","Telefon":"0532 111","Email":"caner.tas@mail.com","Adres":"-","Not":"Telefon eksik"}
+   Hatalar:
+   - First name is required
+   - Invalid phone format: 0532 111
+
+16. Satır 17:
+   Veri: {"﻿Ad":"Ceren","Soyad":"","Telefon":"+90 5321112233","Email":"ceren@@mail.com","Adres":"Istanbul","Not":"Email hatali"}
+   Hatalar:
+   - First name is required
+   - Invalid email format: ceren@@mail.com
+
+17. Satır 18:
+   Veri: {"﻿Ad":"Yusuf","Soyad":"Demir","Telefon":"0(532)1112233","Email":"yusuf.demir@mail.com","Adres":"Hatay","Not":"Soyad farkli yazilmis"}
+   Hatalar:
+   - First name is required
+
+18. Satır 19:
+   Veri: {"﻿Ad":"Esra","Soyad":"Arslan","Telefon":"+90-532-111-22-33","Email":"esra_arslanmail.com","Adres":"Antalya","Not":"@ eksik"}
+   Hatalar:
+   - First name is required
+   - Invalid email format: esra_arslanmail.com
+
+19. Satır 20:
+   Veri: {"﻿Ad":"Muhammed","Soyad":"Ak","Telefon":"5321112233","Email":"","Adres":"Istanbul","Not":"Email yok"}
+   Hatalar:
+   - First name is required
+
+20. Satır 21:
+   Veri: {"﻿Ad":"M.","Soyad":"Demir","Telefon":"5321112233","Email":"mdemir@mail.com","Adres":"","Not":"Ad cok belirsiz"}
+   Hatalar:
+   - First name is required
+

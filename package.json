@@ -9,20 +9,23 @@
     "test": "jest --runInBand",
     "migrate": "npx sequelize-cli db:migrate"
   },
-    "jest": {
-    "setupFilesAfterEnv": ["<rootDir>/tests/setup.js"]
+  "jest": {
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/setup.js"
+    ]
   },
   "dependencies": {
+    "csv-parse": "^6.1.0",
+    "dotenv": "^16.4.0",
     "express": "^4.19.0",
-    "sequelize": "^6.37.0",
     "pg": "^8.11.0",
     "pg-hstore": "^2.3.4",
-    "dotenv": "^16.4.0",
+    "sequelize": "^6.37.0",
     "winston": "^3.11.0"
   },
   "devDependencies": {
     "jest": "^29.7.0",
-    "supertest": "^6.3.4",
-    "nodemon": "^3.1.0"
+    "nodemon": "^3.1.0",
+    "supertest": "^6.3.4"
   }
 }

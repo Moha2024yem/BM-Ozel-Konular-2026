@@ -209,21 +209,62 @@ Content-Type: application/json
 
 Toplu müşteri verilerini CSV dosyasından içe aktarabilirsiniz:
 
+### Kullanım
+
 ```bash
-npm run import:customers customers_raw_ordered.csv
+# Varsayılan dosyayı kullan (data/customers_raw_ordered.csv)
+node scripts/import-customers.js
+
+# Belirli bir dosya kullan
+node scripts/import-customers.js data/sample_customers.csv
+
+# Kendi dosyanızı kullan
+node scripts/import-customers.js data/my_customers.csv
 ```
+
+**CSV Dosyaları:** Tüm CSV dosyalarını `data/` klasörüne koyun.
 
 **CSV Formatı:**
 ```csv
 Ad,Soyad,Telefon,Email,Adres
 Ahmet,Yilmaz,+90 532 111 22 33,ahmet@example.com,"Istanbul, Kadikoy"
+Mehmet Ali,,05321112233,mehmet@mail.com,Ankara
+Ayşe,Kara,5551234567,ayse@mail.com,Izmir
 ```
 
-Script otomatik olarak:
-- Telefon numaralarını normalize eder (+90XXXXXXXXXX formatına)
-- Email adreslerini validate eder
-- Duplicate kayıtları tespit eder
-- Hatalı kayıtları raporlar (`etl-errors.log` dosyasına)
+**Sütun Açıklamaları:**
+- `Ad` (Zorunlu) - Müşterinin adı
+- `Soyad` (Opsiyonel) - Müşterinin soyadı
+- `Telefon` (Opsiyonel*) - Telefon numarası (herhangi bir formatta)
+- `Email` (Opsiyonel*) - Email adresi
+- `Adres` (Opsiyonel) - Adres bilgisi
+
+*Not: En az Telefon veya Email'den biri gereklidir.
+
+**Script Özellikleri:**
+- ✅ Telefon numaralarını normalize eder (+90XXXXXXXXXX formatına)
+- ✅ Email adreslerini validate eder
+- ✅ Duplicate kayıtları tespit eder
+- ✅ İsimleri temizler (boşluk, tırnak işareti)
+- ✅ Hatalı kayıtları raporlar (`etl-errors.log` dosyasına)
+
+**Örnek Çıktı:**
+```
+ETL Script Başlatıldı: 2026-01-11T12:00:00.000Z
+CSV Dosyası: data/sample_customers.csv
+Toplam Kayıt Sayısı: 10
+
+[Satır 2] ✓ BAŞARILI: Ahmet Yilmaz
+[Satır 3] ✓ BAŞARILI: Mehmet Ali
+[Satır 4] ✗ HATA: Invalid email format
+[Satır 5] DUPLICATE: Ali Öztürk
+
+=== ETL Script Tamamlandı ===
+Toplam: 10
+Başarılı: 7
+Başarısız: 2
+Duplicate: 1
+```
 
 ## Test Çalıştırma
 
@@ -262,24 +303,42 @@ Her request için unique **trace ID** oluşturulur ve hata takibi kolaylaşır.
 ## Proje Yapısı
 
 ```
-BM-Ozel-Konular-2026-1/
-├── migrations/          # Veritabanı migration dosyalar\u0131
+BM-Ozel-Konular-2026-2/
+├── data/                # CSV veri dosyaları
+│   ├── customers_raw_ordered.csv
+│   ├── sample_customers.csv
+│   └── sample_orders.csv
+├── migrations/          # Veritabanı migration dosyaları
+│   ├── 20260111000000-create-products.js
+│   ├── 20260111000001-create-product-prices.js
+│   └── 20260111000002-create-order-items.js
 ├── scripts/             # ETL ve utility scriptler
 │   └── import-customers.js
 ├── src/
-│   ├── config/          # Konfigürasyon dosyalar\u0131
+│   ├── config/          # Konfigürasyon dosyaları
 │   ├── lib/             # Logger vb. yardımcı kütüphaneler
 │   ├── middleware/      # Express middleware'ler
 │   ├── models/          # Sequelize modeller
-│   ├── routes/          # API route'lar\u0131
-│   ├── services/        # Business logic katman\u0131
+│   │   ├── product.js
+│   │   ├── productPrice.js
+│   │   └── orderItem.js
+│   ├── routes/          # API route'ları
+│   │   ├── customers.js
+│   │   ├── orders.js
+│   │   └── products.js
+│   ├── services/        # Business logic katmanı
+│   │   ├── customerService.js
+│   │   ├── orderService.js
+│   │   └── productService.js
 │   ├── utils/           # Utility fonksiyonlar
 │   ├── app.js           # Express app konfigürasyonu
 │   └── server.js        # HTTP sunucu
-├── tests/               # Test dosyalar\u0131
+├── tests/               # Test dosyaları
 │   ├── setup.js
 │   ├── customers.test.js
-│   └── orders.test.js
+│   ├── orders.test.js
+│   ├── orders-enhanced.test.js
+│   └── products.test.js
 ├── .env.example         # Ortam değişkenleri şablonu
 ├── .sequelizerc         # Sequelize CLI konfigürasyonu
 └── package.json
