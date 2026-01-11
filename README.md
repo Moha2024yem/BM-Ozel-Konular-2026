@@ -155,7 +155,7 @@ BM-Ozel-Konular-2026-2/
 │
 ├── api/                     # API klasörü (eski)
 ├── data/                    # CSV veri dosyaları (4 dosya)
-├── docs/                    # Dokümantasyon (4 dosya)
+├── docs/                    # Dokümantasyon (3 dosya)
 │   ├── GEREKSINIM_ANALIZI.md
 │   ├── MIMARI_TASARIM.md
 │   └── API.md
