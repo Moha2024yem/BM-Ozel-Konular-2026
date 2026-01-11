@@ -89,7 +89,8 @@ describe('Product API Tests', () => {
         });
 
         it('should return 400 for duplicate SKU', async () => {
-// Öncelikle belirli bir SKU'ya sahip bir ürün oluşturun.            await request(app)
+            // Öncelikle belirli bir SKU'ya sahip bir ürün oluşturun.            
+            await request(app)
                 .post('/api/products')
                 .send({
                     name: 'First Laptop',
@@ -97,7 +98,8 @@ describe('Product API Tests', () => {
                     basePrice: 3000
                 });
 
-// Ardından aynı SKU ile bir tane daha oluşturmayı deneyin.            const response = await request(app)
+            // Ardından aynı SKU ile bir tane daha oluşturmayı deneyin.            
+            const response = await request(app)
                 .post('/api/products')
                 .send({
                     name: 'Another Laptop',
@@ -218,7 +220,7 @@ describe('Product API Tests', () => {
         let testProduct;
 
         beforeEach(async () => {
-            //// Her testten önce fiyatlandırma testleri için özel bir ürün oluşturun
+            // Her testten önce fiyatlandırma testleri için özel bir ürün oluşturun
             testProduct = await createTestProduct({ basePrice: 6000 });
 
             // Add wholesale price  
