@@ -13,9 +13,10 @@ Bu proje kapsamlı dokümantasyona sahiptir. Detaylı bilgi için ilgili doküma
 | Doküman | Açıklama | Link |
 |---------|----------|------|
 | **Gereksinim Analizi** | Müşteri talepleri ve netleştirme süreci | [GEREKSINIM_ANALIZI.md](docs/GEREKSINIM_ANALIZI.md) |
-| **Mimari Tasarım** | Sistem mimarisi, veritabanı şeması, UML | [ MIMARI_TASARIM.md](docs/MIMARI_TASARIM.md) |
-| **API Dokümantasyonu** | Tüm endpoint'ler ve kullanım örnekleri | [ API.md](docs/API.md) |
-| **Veri Klasörü** | CSV import ve veri yönetimi | [ data/README.md](data/README.md) |
+| **Mimari Tasarım** | Sistem mimarisi, veritabanı şeması, UML | [MIMARI_TASARIM.md](docs/MIMARI_TASARIM.md) |
+| **API Dokümantasyonu** | Tüm endpoint'ler ve kullanım örnekleri | [API.md](docs/API.md) |
+| **Test Raporu** | Test sonuçları ve kapsam bilgisi | [TEST_RAPORU.md](docs/TEST_RAPORU.md) |
+| **Veri Klasörü** | CSV import ve veri yönetimi | [data/README.md](data/README.md) |
 
 ---
 
@@ -127,10 +128,10 @@ POST /api/orders
 # Tüm testleri çalıştır
 npm test
 
-# Test sonuçları:
-# Test Suites: 5 passed, 1 failed, 6 total
-# Tests: 36 passed, 12 failed, 48 total
-# Coverage: %75 (Kabul edilebilir)
+Test Suites: 6 passed, 6 total                                                                                                                                                        
+Tests:       48 passed, 48 total
+Snapshots:   0 total
+Time:        8.251 s
 ```
 
 ---
@@ -139,22 +140,42 @@ npm test
 
 ```
 BM-Ozel-Konular-2026-2/
-├── docs/                    #  Dokümantasyon
+├── .env                     # Ortam değişkenleri
+├── .env.example             # Şablon dosya
+├── .github/                 # GitHub CI/CD
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── workflows/
+│       ├── test.yml
+│       └── deploy.yml
+├── .gitignore
+├── .sequelizerc             # Sequelize config
+├── README.md
+├── REVIEW.md
+├── package.json
+│
+├── api/                     # API klasörü (eski)
+├── data/                    # CSV veri dosyaları (4 dosya)
+├── docs/                    # Dokümantasyon (4 dosya)
 │   ├── GEREKSINIM_ANALIZI.md
 │   ├── MIMARI_TASARIM.md
 │   └── API.md
-├── data/                    #  CSV veri dosyaları
-├── migrations/              #  Veritabanı migration'ları
-├── src/
-│   ├── routes/              #  API endpoint'leri
-│   ├── services/            #  İş mantığı
-│   ├── models/              #  Veritabanı modelleri
-│   ├── middleware/          #  Express middleware
-│   ├── utils/               #  Yardımcı fonksiyonlar
-│   └── lib/                 #  Kütüphaneler (logger)
-├── tests/                   #  Test dosyaları
-├── scripts/                 #  ETL scriptleri
-└── README.md                #  Bu dosya
+├── logs/                    # Log dosyaları (2 dosya)
+│   ├── combined.log
+│   └── error.log
+├── migrations/              # Migration dosyaları (7 dosya)
+├── scripts/                 # ETL scriptleri (2 dosya)
+├── tests/                   # Test dosyaları (7 dosya)
+│
+└── src/                     # Kaynak kod
+    ├── app.js
+    ├── server.js
+    ├── config/              # Konfigürasyon (2 dosya)
+    ├── lib/                 # Logger (1 dosya)
+    ├── middleware/          # Middleware (1 dosya)
+    ├── models/              # Modeller (6 dosya)
+    ├── routes/              # API routes (3 dosya)
+    ├── services/            # Servisler (3 dosya)
+    └── utils/               # Yardımcılar (1 dosya)
 ```
 
 **Detaylı mimari bilgi için:** [MIMARI_TASARIM.md](docs/MIMARI_TASARIM.md)
@@ -169,11 +190,17 @@ BM-Ozel-Konular-2026-2/
 npx sequelize-cli db:migrate:status
 
 # Çıktı:
-#  up 20240101000000-create-customer.js
-#  up 20240102000000-create-order.js
-#  up 20260111000000-create-products.js
-#  up 20260111000001-create-product-prices.js
-#  up 20260111000002-create-order-items.js
+#Using environment "development".
+#up 20240101000000-create-customer.js
+#up 20240102000000-create-order.js
+#up 20240103000000-add-customer-isactive.js
+#up 20240104000000-add-order-foreign-key.js
+#up 20240105000000-fix-order-status.js
+#up 20260108060000-add-customer-isactive.js
+#up 20260108070000-add-order-foreign-key.js
+#up 20260111000000-create-products.js
+#up 20260111000001-create-product-prices.js
+#up 20260111000002-create-order-items.js
 ```
 
 ### Tablolar
@@ -240,7 +267,9 @@ MOHAMMED ABDULRAHMAN ABDO ABDULLAH AL-HAMIDI 245112073
 ---
 **Code Review Yapanlar:**  
 - Burak Ünal – 245172017  
-- Salih Kızılkaya – 245172026 
+- Salih Kızılkaya – 245172026
+- [Issues](https://github.com/Moha2024yem/BM-Ozel-Konular-2026/issues)
+
 
 
 ---
