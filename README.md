@@ -240,7 +240,9 @@ MOHAMMED ABDULRAHMAN ABDO ABDULLAH AL-HAMIDI 245112073
 ---
 **Code Review Yapanlar:**  
 - Burak Ünal – 245172017  
-- Salih Kızılkaya – 245172026 
+- Salih Kızılkaya – 245172026
+- [Issues](https://github.com/Moha2024yem/BM-Ozel-Konular-2026/issues)
+
 
 
 ---
