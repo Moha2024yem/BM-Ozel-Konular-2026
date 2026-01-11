@@ -18,13 +18,13 @@ ETL test dosyası - müşteri verileri (temizlenmemiş, hatalı kayıtlar içeri
 ### CSV dosyası import etmek:
 
 ```bash
-# Varsayılan dosyayı kullan
+# Varsayılan dosyayı kullanmak
 node scripts/import-customers.js
 
-# Belirli bir dosya kullan
+# Belirli bir dosya kullanmak
 node scripts/import-customers.js data/sample_customers.csv
 
-# Kendi dosyanı kullan
+# Kendi dosyanı kullanmak
 node scripts/import-customers.js data/my_customers.csv
 ```
 
@@ -53,8 +53,8 @@ Mehmet,,5551112233,mehmet@mail.com,Izmir
 
 ## Özellikler
 
-✅ Otomatik telefon normalizasyonu (+90XXXXXXXXXX)  
-✅ İsim temizleme (boşluk, tırnak işareti)  
-✅ Email validasyonu  
-✅ Duplicate kontrolü  
-✅ Hata raporu (etl-errors.log)
+ Otomatik telefon normalizasyonu (+90XXXXXXXXXX)  
+ İsim temizleme (boşluk, tırnak işareti)  
+ Email validasyonu  
+ Duplicate kontrolü  
+ Hata raporu (etl-errors.log)
