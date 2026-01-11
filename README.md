@@ -139,22 +139,42 @@ Time:        8.251 s
 
 ```
 BM-Ozel-Konular-2026-2/
-├── docs/                    #  Dokümantasyon
+├── .env                     # Ortam değişkenleri
+├── .env.example             # Şablon dosya
+├── .github/                 # GitHub CI/CD
+│   ├── PULL_REQUEST_TEMPLATE.md
+│   └── workflows/
+│       ├── test.yml
+│       └── deploy.yml
+├── .gitignore
+├── .sequelizerc             # Sequelize config
+├── README.md
+├── REVIEW.md
+├── package.json
+│
+├── api/                     # API klasörü (eski)
+├── data/                    # CSV veri dosyaları (4 dosya)
+├── docs/                    # Dokümantasyon (3 dosya)
 │   ├── GEREKSINIM_ANALIZI.md
 │   ├── MIMARI_TASARIM.md
 │   └── API.md
-├── data/                    #  CSV veri dosyaları
-├── migrations/              #  Veritabanı migration'ları
-├── src/
-│   ├── routes/              #  API endpoint'leri
-│   ├── services/            #  İş mantığı
-│   ├── models/              #  Veritabanı modelleri
-│   ├── middleware/          #  Express middleware
-│   ├── utils/               #  Yardımcı fonksiyonlar
-│   └── lib/                 #  Kütüphaneler (logger)
-├── tests/                   #  Test dosyaları
-├── scripts/                 #  ETL scriptleri
-└── README.md                #  Bu dosya
+├── logs/                    # Log dosyaları (2 dosya)
+│   ├── combined.log
+│   └── error.log
+├── migrations/              # Migration dosyaları (7 dosya)
+├── scripts/                 # ETL scriptleri (2 dosya)
+├── tests/                   # Test dosyaları (7 dosya)
+│
+└── src/                     # Kaynak kod
+    ├── app.js
+    ├── server.js
+    ├── config/              # Konfigürasyon (2 dosya)
+    ├── lib/                 # Logger (1 dosya)
+    ├── middleware/          # Middleware (1 dosya)
+    ├── models/              # Modeller (6 dosya)
+    ├── routes/              # API routes (3 dosya)
+    ├── services/            # Servisler (3 dosya)
+    └── utils/               # Yardımcılar (1 dosya)
 ```
 
 **Detaylı mimari bilgi için:** [MIMARI_TASARIM.md](docs/MIMARI_TASARIM.md)
@@ -169,11 +189,17 @@ BM-Ozel-Konular-2026-2/
 npx sequelize-cli db:migrate:status
 
 # Çıktı:
-#  up 20240101000000-create-customer.js
-#  up 20240102000000-create-order.js
-#  up 20260111000000-create-products.js
-#  up 20260111000001-create-product-prices.js
-#  up 20260111000002-create-order-items.js
+#Using environment "development".
+#up 20240101000000-create-customer.js
+#up 20240102000000-create-order.js
+#up 20240103000000-add-customer-isactive.js
+#up 20240104000000-add-order-foreign-key.js
+#up 20240105000000-fix-order-status.js
+#up 20260108060000-add-customer-isactive.js
+#up 20260108070000-add-order-foreign-key.js
+#up 20260111000000-create-products.js
+#up 20260111000001-create-product-prices.js
+#up 20260111000002-create-order-items.js
 ```
 
 ### Tablolar
