@@ -1,0 +1,55 @@
+2026-01-11 16:52:44 [[31merror[39m] [1e3a1c98-8865-4f9d-b21d-24f94a59e444]: Error updating customer {"err":{"statusCode":400,"field":"id"},"customerId":"1"}
+2026-01-11 16:52:44 [[31merror[39m] [1e3a1c98-8865-4f9d-b21d-24f94a59e444]: Unhandled error {"error":"Customer not found","url":"/api/customers/1","method":"PUT"}
+Error: Customer not found
+    at createValidationError (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\utils\validators.js:66:19)
+    at getCustomerById (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:51:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.updateCustomer (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:117:20)
+    at async C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\routes\customers.js:69:22
+2026-01-11 16:52:50 [[31merror[39m] [c3ab95e3-8489-41ff-a461-709040d502ed]: Error updating customer {"err":{"statusCode":400,"field":"id"},"customerId":"1"}
+2026-01-11 16:52:50 [[31merror[39m] [c3ab95e3-8489-41ff-a461-709040d502ed]: Unhandled error {"error":"Customer not found","url":"/api/customers/1","method":"PUT"}
+Error: Customer not found
+    at createValidationError (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\utils\validators.js:66:19)
+    at getCustomerById (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:51:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.updateCustomer (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:117:20)
+    at async C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\routes\customers.js:69:22
+2026-01-11 16:57:05 [[31merror[39m] [e55d96e2-a995-4cee-a26b-f27ae89bc0db]: Error updating customer {"err":{"statusCode":400,"field":"id"},"customerId":"1"}
+2026-01-11 16:57:05 [[31merror[39m] [e55d96e2-a995-4cee-a26b-f27ae89bc0db]: Unhandled error {"error":"Customer not found","url":"/api/customers/1","method":"PUT"}
+Error: Customer not found
+    at createValidationError (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\utils\validators.js:66:19)
+    at getCustomerById (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:51:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.updateCustomer (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:117:20)
+    at async C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\routes\customers.js:69:22
+2026-01-11 16:57:14 [[31merror[39m] [78071268-8a1e-439d-9301-6d7911d041e5]: Error creating customer {"err":{"statusCode":400,"field":"firstName"}}
+2026-01-11 16:57:14 [[31merror[39m] [78071268-8a1e-439d-9301-6d7911d041e5]: Unhandled error {"error":"First name is required","url":"/api/customers","method":"POST"}
+Error: First name is required
+    at createValidationError (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\utils\validators.js:66:19)
+    at Object.createCustomer (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:63:11)
+    at C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\routes\customers.js:55:44
+    at Layer.handle [as handle_request] (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\node_modules\express\lib\router\index.js:280:10)
+2026-01-11 16:58:16 [[31merror[39m] [a53f4d70-f0b4-4647-9680-307bf02e0fed]: Error updating customer {"err":{"statusCode":400,"field":"id"},"customerId":"1"}
+2026-01-11 16:58:16 [[31merror[39m] [a53f4d70-f0b4-4647-9680-307bf02e0fed]: Unhandled error {"error":"Customer not found","url":"/api/customers/1","method":"PUT"}
+Error: Customer not found
+    at createValidationError (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\utils\validators.js:66:19)
+    at getCustomerById (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:51:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.updateCustomer (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:117:20)
+    at async C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\routes\customers.js:69:22
+2026-01-11 17:01:07 [[31merror[39m] [bf046924-aa00-4c93-a3e9-cc424a628fea]: Error updating customer {"err":{"statusCode":400,"field":"id"},"customerId":"1"}
+2026-01-11 17:01:07 [[31merror[39m] [bf046924-aa00-4c93-a3e9-cc424a628fea]: Unhandled error {"error":"Customer not found","url":"/api/customers/1","method":"PUT"}
+Error: Customer not found
+    at createValidationError (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\utils\validators.js:66:19)
+    at getCustomerById (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:51:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.updateCustomer (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:117:20)
+    at async C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\routes\customers.js:69:22
+2026-01-11 17:05:53 [[31merror[39m]: Error creating product {"error":"SKU already exists"}
+2026-01-11 17:06:06 [[31merror[39m]: Error creating product {"error":"SKU already exists"}

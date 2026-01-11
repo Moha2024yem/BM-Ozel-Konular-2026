@@ -13,6 +13,22 @@ describe('Product API Tests', () => {
         await sequelize.close();
     });
 
+    // Test ürünü oluşturmak için yardımcı fonksiyon
+    async function createTestProduct(overrides = {}) {
+        const response = await request(app)
+            .post('/api/products')
+            .send({
+                name: 'Test Laptop',
+                description: 'Gaming laptop',
+                sku: `LAP-${Date.now()}-${Math.random()}`, // Unique SKU
+                basePrice: 5000,
+                stockQuantity: 10,
+                trackInventory: true,
+                ...overrides
+            });
+        return response.body;
+    }
+
     describe('POST /api/products', () => {
         it('should create a new product with inventory tracking', async () => {
             const response = await request(app)
@@ -73,11 +89,19 @@ describe('Product API Tests', () => {
         });
 
         it('should return 400 for duplicate SKU', async () => {
-            const response = await request(app)
+// Öncelikle belirli bir SKU'ya sahip bir ürün oluşturun.            await request(app)
+                .post('/api/products')
+                .send({
+                    name: 'First Laptop',
+                    sku: 'DUPLICATE-SKU',
+                    basePrice: 3000
+                });
+
+// Ardından aynı SKU ile bir tane daha oluşturmayı deneyin.            const response = await request(app)
                 .post('/api/products')
                 .send({
                     name: 'Another Laptop',
-                    sku: 'LAP-001', // Same as first product
+                    sku: 'DUPLICATE-SKU',
                     basePrice: 3000
                 });
 
@@ -108,10 +132,11 @@ describe('Product API Tests', () => {
 
     describe('GET /api/products/:id', () => {
         it('should get a product by id', async () => {
-            const response = await request(app).get(`/api/products/${createdProduct.id}`);
+            const product = await createTestProduct();
+            const response = await request(app).get(`/api/products/${product.id}`);
 
             expect(response.status).toBe(200);
-            expect(response.body.id).toBe(createdProduct.id);
+            expect(response.body.id).toBe(product.id);
         });
 
         it('should return 400 for non-existent product', async () => {
@@ -124,8 +149,9 @@ describe('Product API Tests', () => {
 
     describe('PUT /api/products/:id', () => {
         it('should update a product', async () => {
+            const product = await createTestProduct();
             const response = await request(app)
-                .put(`/api/products/${createdProduct.id}`)
+                .put(`/api/products/${product.id}`)
                 .send({
                     name: 'Gaming Laptop Pro',
                     basePrice: 6000
@@ -139,8 +165,9 @@ describe('Product API Tests', () => {
 
     describe('Stock Management', () => {
         it('should add stock to product', async () => {
+            const product = await createTestProduct({ stockQuantity: 10 });
             const response = await request(app)
-                .put(`/api/products/${createdProduct.id}/stock`)
+                .put(`/api/products/${product.id}/stock`)
                 .send({
                     quantity: 5,
                     operation: 'add'
@@ -151,8 +178,9 @@ describe('Product API Tests', () => {
         });
 
         it('should subtract stock from product', async () => {
+            const product = await createTestProduct({ stockQuantity: 15 });
             const response = await request(app)
-                .put(`/api/products/${createdProduct.id}/stock`)
+                .put(`/api/products/${product.id}/stock`)
                 .send({
                     quantity: 3,
                     operation: 'subtract'
@@ -163,8 +191,9 @@ describe('Product API Tests', () => {
         });
 
         it('should return 400 for insufficient stock', async () => {
+            const product = await createTestProduct({ stockQuantity: 5 });
             const response = await request(app)
-                .put(`/api/products/${createdProduct.id}/stock`)
+                .put(`/api/products/${product.id}/stock`)
                 .send({
                     quantity: 100,
                     operation: 'subtract'
@@ -175,8 +204,9 @@ describe('Product API Tests', () => {
         });
 
         it('should check stock availability', async () => {
+            const product = await createTestProduct({ stockQuantity: 10 });
             const response = await request(app)
-                .get(`/api/products/${createdProduct.id}/stock/check?quantity=5`);
+                .get(`/api/products/${product.id}/stock/check?quantity=5`);
 
             expect(response.status).toBe(200);
             expect(response.body.available).toBe(true);
@@ -185,10 +215,15 @@ describe('Product API Tests', () => {
     });
 
     describe('Multiple Pricing', () => {
-        beforeAll(async () => {
+        let testProduct;
+
+        beforeEach(async () => {
+            //// Her testten önce fiyatlandırma testleri için özel bir ürün oluşturun
+            testProduct = await createTestProduct({ basePrice: 6000 });
+
             // Add wholesale price  
             await request(app)
-                .post(`/api/products/${createdProduct.id}/prices`)
+                .post(`/api/products/${testProduct.id}/prices`)
                 .send({
                     priceType: 'wholesale',
                     price: 4500,
@@ -197,7 +232,7 @@ describe('Product API Tests', () => {
 
             // Add bulk price
             await request(app)
-                .post(`/api/products/${createdProduct.id}/prices`)
+                .post(`/api/products/${testProduct.id}/prices`)
                 .send({
                     priceType: 'bulk',
                     price: 4000,
@@ -207,7 +242,7 @@ describe('Product API Tests', () => {
 
         it('should add a new price to product', async () => {
             const response = await request(app)
-                .post(`/api/products/${createdProduct.id}/prices`)
+                .post(`/api/products/${testProduct.id}/prices`)
                 .send({
                     priceType: 'retail',
                     price: 5500,
@@ -221,7 +256,7 @@ describe('Product API Tests', () => {
 
         it('should get all prices for product', async () => {
             const response = await request(app)
-                .get(`/api/products/${createdProduct.id}/prices`);
+                .get(`/api/products/${testProduct.id}/prices`);
 
             expect(response.status).toBe(200);
             expect(response.body.prices.length).toBeGreaterThan(0);
@@ -229,7 +264,7 @@ describe('Product API Tests', () => {
 
         it('should calculate price for quantity 1 (base price)', async () => {
             const response = await request(app)
-                .get(`/api/products/${createdProduct.id}/calculate-price?quantity=1`);
+                .get(`/api/products/${testProduct.id}/calculate-price?quantity=1`);
 
             expect(response.status).toBe(200);
             expect(parseFloat(response.body.unitPrice)).toBe(6000); // Base price
@@ -237,7 +272,7 @@ describe('Product API Tests', () => {
 
         it('should calculate price for quantity 7 (wholesale)', async () => {
             const response = await request(app)
-                .get(`/api/products/${createdProduct.id}/calculate-price?quantity=7`);
+                .get(`/api/products/${testProduct.id}/calculate-price?quantity=7`);
 
             expect(response.status).toBe(200);
             expect(parseFloat(response.body.unitPrice)).toBe(4500); // Wholesale price
@@ -246,7 +281,7 @@ describe('Product API Tests', () => {
 
         it('should calculate price for quantity 15 (bulk)', async () => {
             const response = await request(app)
-                .get(`/api/products/${createdProduct.id}/calculate-price?quantity=15`);
+                .get(`/api/products/${testProduct.id}/calculate-price?quantity=15`);
 
             expect(response.status).toBe(200);
             expect(parseFloat(response.body.unitPrice)).toBe(4000); // Bulk price
@@ -257,7 +292,7 @@ describe('Product API Tests', () => {
 
     describe('DELETE /api/products/:id', () => {
         it('should soft delete a product', async () => {
-            // Create a fresh product for delete test
+            // Silme testi için yeni bir ürün oluşturun
             const newProduct = await request(app)
                 .post('/api/products')
                 .send({

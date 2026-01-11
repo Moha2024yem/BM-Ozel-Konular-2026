@@ -19,3 +19,131 @@
 2026-01-11 00:02:32 [[32minfo[39m] [fbc73f41-ba21-482b-ad28-c0b4c15749e5]: Request completed {"method":"GET","url":"/","statusCode":200,"duration":"23ms"}
 2026-01-11 00:04:56 [[32minfo[39m]: DB connection OK
 2026-01-11 00:04:56 [[32minfo[39m]: Server listening on port 3000
+2026-01-11 16:50:10 [[32minfo[39m]: DB connection OK
+2026-01-11 16:50:10 [[32minfo[39m]: Server listening on port 3000
+2026-01-11 16:50:38 [[32minfo[39m] [915eecf5-fb9d-4cb7-8a73-fc0c2e28a27a]: Incoming request {"method":"GET","url":"/api/customers","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+2026-01-11 16:50:39 [[32minfo[39m] [915eecf5-fb9d-4cb7-8a73-fc0c2e28a27a]: Request completed {"method":"GET","url":"/","statusCode":200,"duration":"131ms"}
+2026-01-11 16:50:39 [[32minfo[39m] [11ed573d-6f3b-4ffd-bb4c-2700e7f8021a]: Incoming request {"method":"GET","url":"/api/customers","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+2026-01-11 16:50:39 [[32minfo[39m] [11ed573d-6f3b-4ffd-bb4c-2700e7f8021a]: Request completed {"method":"GET","url":"/","statusCode":304,"duration":"17ms"}
+2026-01-11 16:50:39 [[32minfo[39m] [1190152a-0b7d-4da6-81f6-c0e7cd68886c]: Incoming request {"method":"GET","url":"/favicon.ico","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+2026-01-11 16:50:39 [[33mwarn[39m] [1190152a-0b7d-4da6-81f6-c0e7cd68886c]: Request completed {"method":"GET","url":"/favicon.ico","statusCode":404,"duration":"2ms"}
+2026-01-11 16:50:39 [[32minfo[39m] [66584a39-5f98-4ccb-8949-90f5d67b7d4a]: Incoming request {"method":"GET","url":"/favicon.ico","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+2026-01-11 16:50:39 [[33mwarn[39m] [66584a39-5f98-4ccb-8949-90f5d67b7d4a]: Request completed {"method":"GET","url":"/favicon.ico","statusCode":404,"duration":"3ms"}
+2026-01-11 16:51:00 [[32minfo[39m] [3fa3ddcd-f4a6-4a38-9aae-3225566002f3]: Incoming request {"method":"GET","url":"/api/products","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+2026-01-11 16:51:00 [[32minfo[39m] [3fa3ddcd-f4a6-4a38-9aae-3225566002f3]: Request completed {"method":"GET","url":"/","statusCode":200,"duration":"116ms"}
+2026-01-11 16:51:00 [[32minfo[39m] [ed6c148f-f2d8-4352-acfe-7d860c4c3acf]: Incoming request {"method":"GET","url":"/api/products","ip":"::1","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36"}
+2026-01-11 16:51:00 [[32minfo[39m] [ed6c148f-f2d8-4352-acfe-7d860c4c3acf]: Request completed {"method":"GET","url":"/","statusCode":304,"duration":"17ms"}
+2026-01-11 16:52:02 [[32minfo[39m] [dc170cec-aeb6-4c98-91be-c941d0590b03]: Incoming request {"method":"POST","url":"/api/customers","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 16:52:02 [[33mwarn[39m]: Potential duplicate customer detected {"email":"mohammed.ali@test.com","phone":"+905551112233","existingCustomers":[8]}
+2026-01-11 16:52:02 [[32minfo[39m]: Creating customer {"firstName":"Mohammed","email":"mohammed.ali@test.com"}
+2026-01-11 16:52:02 [[32minfo[39m] [dc170cec-aeb6-4c98-91be-c941d0590b03]: Request completed {"method":"POST","url":"/","statusCode":201,"duration":"51ms"}
+2026-01-11 16:52:09 [[32minfo[39m] [05388138-ad23-4120-ab1b-489aafc61c3f]: Incoming request {"method":"POST","url":"/api/customers","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 16:52:09 [[33mwarn[39m]: Potential duplicate customer detected {"email":"test@example.com","phone":"+905551112233","existingCustomers":[8,9,10,11,12,13,14,15,16,17,18,19,20,23,24,26,27,28,29,30,31,32,33,34,35,36,37,40,41,43,44,45,46,47,48,49,50,51,52,53,54,57,58,60]}
+2026-01-11 16:52:09 [[32minfo[39m]: Creating customer {"firstName":"Mohammed","email":"test@example.com"}
+2026-01-11 16:52:09 [[32minfo[39m] [05388138-ad23-4120-ab1b-489aafc61c3f]: Request completed {"method":"POST","url":"/","statusCode":201,"duration":"6ms"}
+2026-01-11 16:52:32 [[32minfo[39m] [64c8e45a-d032-4dfd-baa3-2e110789c8f7]: Incoming request {"method":"PUT","url":"/api/customers","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 16:52:32 [[33mwarn[39m] [64c8e45a-d032-4dfd-baa3-2e110789c8f7]: Request completed {"method":"PUT","url":"/api/customers","statusCode":404,"duration":"1ms"}
+2026-01-11 16:52:44 [[32minfo[39m] [1e3a1c98-8865-4f9d-b21d-24f94a59e444]: Incoming request {"method":"PUT","url":"/api/customers/1","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 16:52:44 [[31merror[39m] [1e3a1c98-8865-4f9d-b21d-24f94a59e444]: Error updating customer {"err":{"statusCode":400,"field":"id"},"customerId":"1"}
+2026-01-11 16:52:44 [[31merror[39m] [1e3a1c98-8865-4f9d-b21d-24f94a59e444]: Unhandled error {"error":"Customer not found","url":"/api/customers/1","method":"PUT"}
+Error: Customer not found
+    at createValidationError (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\utils\validators.js:66:19)
+    at getCustomerById (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:51:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.updateCustomer (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:117:20)
+    at async C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\routes\customers.js:69:22
+2026-01-11 16:52:44 [[33mwarn[39m] [1e3a1c98-8865-4f9d-b21d-24f94a59e444]: Request completed {"method":"PUT","url":"/api/customers/1","statusCode":400,"duration":"39ms"}
+2026-01-11 16:52:50 [[32minfo[39m] [c3ab95e3-8489-41ff-a461-709040d502ed]: Incoming request {"method":"PUT","url":"/api/customers/1","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 16:52:50 [[31merror[39m] [c3ab95e3-8489-41ff-a461-709040d502ed]: Error updating customer {"err":{"statusCode":400,"field":"id"},"customerId":"1"}
+2026-01-11 16:52:50 [[31merror[39m] [c3ab95e3-8489-41ff-a461-709040d502ed]: Unhandled error {"error":"Customer not found","url":"/api/customers/1","method":"PUT"}
+Error: Customer not found
+    at createValidationError (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\utils\validators.js:66:19)
+    at getCustomerById (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:51:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.updateCustomer (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:117:20)
+    at async C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\routes\customers.js:69:22
+2026-01-11 16:52:50 [[33mwarn[39m] [c3ab95e3-8489-41ff-a461-709040d502ed]: Request completed {"method":"PUT","url":"/api/customers/1","statusCode":400,"duration":"3ms"}
+2026-01-11 16:54:53 [[32minfo[39m]: DB connection OK
+2026-01-11 16:54:53 [[32minfo[39m]: Server listening on port 3000
+2026-01-11 16:54:54 [[32minfo[39m]: DB connection OK
+2026-01-11 16:54:54 [[32minfo[39m]: Server listening on port 3000
+2026-01-11 16:55:20 [[32minfo[39m]: DB connection OK
+2026-01-11 16:55:20 [[32minfo[39m]: Server listening on port 3000
+2026-01-11 16:57:05 [[32minfo[39m] [e55d96e2-a995-4cee-a26b-f27ae89bc0db]: Incoming request {"method":"PUT","url":"/api/customers/1","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 16:57:05 [[31merror[39m] [e55d96e2-a995-4cee-a26b-f27ae89bc0db]: Error updating customer {"err":{"statusCode":400,"field":"id"},"customerId":"1"}
+2026-01-11 16:57:05 [[31merror[39m] [e55d96e2-a995-4cee-a26b-f27ae89bc0db]: Unhandled error {"error":"Customer not found","url":"/api/customers/1","method":"PUT"}
+Error: Customer not found
+    at createValidationError (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\utils\validators.js:66:19)
+    at getCustomerById (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:51:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.updateCustomer (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:117:20)
+    at async C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\routes\customers.js:69:22
+2026-01-11 16:57:05 [[33mwarn[39m] [e55d96e2-a995-4cee-a26b-f27ae89bc0db]: Request completed {"method":"PUT","url":"/api/customers/1","statusCode":400,"duration":"86ms"}
+2026-01-11 16:57:14 [[32minfo[39m] [78071268-8a1e-439d-9301-6d7911d041e5]: Incoming request {"method":"POST","url":"/api/customers","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 16:57:14 [[31merror[39m] [78071268-8a1e-439d-9301-6d7911d041e5]: Error creating customer {"err":{"statusCode":400,"field":"firstName"}}
+2026-01-11 16:57:14 [[31merror[39m] [78071268-8a1e-439d-9301-6d7911d041e5]: Unhandled error {"error":"First name is required","url":"/api/customers","method":"POST"}
+Error: First name is required
+    at createValidationError (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\utils\validators.js:66:19)
+    at Object.createCustomer (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:63:11)
+    at C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\routes\customers.js:55:44
+    at Layer.handle [as handle_request] (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\node_modules\express\lib\router\route.js:149:13)
+    at Route.dispatch (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\node_modules\express\lib\router\route.js:119:3)
+    at Layer.handle [as handle_request] (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\node_modules\express\lib\router\index.js:280:10)
+2026-01-11 16:57:14 [[33mwarn[39m] [78071268-8a1e-439d-9301-6d7911d041e5]: Request completed {"method":"POST","url":"/api/customers","statusCode":400,"duration":"10ms"}
+2026-01-11 16:58:03 [[32minfo[39m] [5bfddd5a-b8a2-490e-8e09-9d935eb822c3]: Incoming request {"method":"POST","url":"/api/customers/1","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 16:58:03 [[33mwarn[39m] [5bfddd5a-b8a2-490e-8e09-9d935eb822c3]: Request completed {"method":"POST","url":"/api/customers/1","statusCode":404,"duration":"6ms"}
+2026-01-11 16:58:16 [[32minfo[39m] [a53f4d70-f0b4-4647-9680-307bf02e0fed]: Incoming request {"method":"PUT","url":"/api/customers/1","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 16:58:16 [[31merror[39m] [a53f4d70-f0b4-4647-9680-307bf02e0fed]: Error updating customer {"err":{"statusCode":400,"field":"id"},"customerId":"1"}
+2026-01-11 16:58:16 [[31merror[39m] [a53f4d70-f0b4-4647-9680-307bf02e0fed]: Unhandled error {"error":"Customer not found","url":"/api/customers/1","method":"PUT"}
+Error: Customer not found
+    at createValidationError (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\utils\validators.js:66:19)
+    at getCustomerById (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:51:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.updateCustomer (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:117:20)
+    at async C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\routes\customers.js:69:22
+2026-01-11 16:58:16 [[33mwarn[39m] [a53f4d70-f0b4-4647-9680-307bf02e0fed]: Request completed {"method":"PUT","url":"/api/customers/1","statusCode":400,"duration":"55ms"}
+2026-01-11 17:00:19 [[32minfo[39m] [2ab407ad-2f7c-464a-a412-83d35bf01401]: Incoming request {"method":"POST","url":"/api/customers","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 17:00:19 [[32minfo[39m]: Creating customer {"firstName":"Ali","email":"ali.kaya@test.com"}
+2026-01-11 17:00:20 [[32minfo[39m] [2ab407ad-2f7c-464a-a412-83d35bf01401]: Request completed {"method":"POST","url":"/","statusCode":201,"duration":"74ms"}
+2026-01-11 17:00:51 [[32minfo[39m] [e0529ef1-611a-4bdb-953a-ba50eeb36023]: Incoming request {"method":"PUT","url":"/api/customers","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 17:00:51 [[33mwarn[39m] [e0529ef1-611a-4bdb-953a-ba50eeb36023]: Request completed {"method":"PUT","url":"/api/customers","statusCode":404,"duration":"4ms"}
+2026-01-11 17:01:07 [[32minfo[39m] [bf046924-aa00-4c93-a3e9-cc424a628fea]: Incoming request {"method":"PUT","url":"/api/customers/1","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 17:01:07 [[31merror[39m] [bf046924-aa00-4c93-a3e9-cc424a628fea]: Error updating customer {"err":{"statusCode":400,"field":"id"},"customerId":"1"}
+2026-01-11 17:01:07 [[31merror[39m] [bf046924-aa00-4c93-a3e9-cc424a628fea]: Unhandled error {"error":"Customer not found","url":"/api/customers/1","method":"PUT"}
+Error: Customer not found
+    at createValidationError (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\utils\validators.js:66:19)
+    at getCustomerById (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:51:11)
+    at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at async Object.updateCustomer (C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\services\customerService.js:117:20)
+    at async C:\Users\hp\Desktop\ozelkonular\BM-Ozel-Konular-2026-2\src\routes\customers.js:69:22
+2026-01-11 17:01:07 [[33mwarn[39m] [bf046924-aa00-4c93-a3e9-cc424a628fea]: Request completed {"method":"PUT","url":"/api/customers/1","statusCode":400,"duration":"71ms"}
+2026-01-11 17:01:38 [[32minfo[39m] [24ca9910-75f9-4392-a8d3-fe983605b5e1]: Incoming request {"method":"PUT","url":"/api/customers/58","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 17:01:38 [[32minfo[39m]: Customer updated {"customerId":"58"}
+2026-01-11 17:01:38 [[32minfo[39m] [24ca9910-75f9-4392-a8d3-fe983605b5e1]: Request completed {"method":"PUT","url":"/58","statusCode":200,"duration":"47ms"}
+2026-01-11 17:02:54 [[32minfo[39m] [e8c46afd-6d7f-449b-8023-abf5ed426043]: Incoming request {"method":"DELETE","url":"/api/customers/58","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 17:02:54 [[32minfo[39m]: Customer soft deleted {"customerId":"58"}
+2026-01-11 17:02:54 [[32minfo[39m] [e8c46afd-6d7f-449b-8023-abf5ed426043]: Request completed {"method":"DELETE","url":"/58","statusCode":200,"duration":"61ms"}
+2026-01-11 17:04:01 [[32minfo[39m] [877512f6-df32-4f0e-88b2-42c074ca0e44]: Incoming request {"method":"POST","url":"/api/products","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 17:04:01 [[32minfo[39m]: Creating product {"name":"Laptop","sku":"LAP-001"}
+2026-01-11 17:04:01 [[32minfo[39m] [877512f6-df32-4f0e-88b2-42c074ca0e44]: Request completed {"method":"POST","url":"/","statusCode":201,"duration":"153ms"}
+2026-01-11 17:05:53 [[32minfo[39m] [8315f7b8-0ce8-40d4-ade4-cae879f6e2ae]: Incoming request {"method":"POST","url":"/api/products","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 17:05:53 [[31merror[39m]: Error creating product {"error":"SKU already exists"}
+2026-01-11 17:05:53 [[33mwarn[39m] [8315f7b8-0ce8-40d4-ade4-cae879f6e2ae]: Request completed {"method":"POST","url":"/","statusCode":400,"duration":"99ms"}
+2026-01-11 17:06:06 [[32minfo[39m] [2b4ebbeb-c110-4ddd-8844-e0dfcd7110b2]: Incoming request {"method":"POST","url":"/api/products","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 17:06:06 [[31merror[39m]: Error creating product {"error":"SKU already exists"}
+2026-01-11 17:06:06 [[33mwarn[39m] [2b4ebbeb-c110-4ddd-8844-e0dfcd7110b2]: Request completed {"method":"POST","url":"/","statusCode":400,"duration":"58ms"}
+2026-01-11 17:06:12 [[32minfo[39m] [66875684-5065-4eb5-93c5-22a270faac5e]: Incoming request {"method":"POST","url":"/api/products","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 17:06:12 [[32minfo[39m]: Creating product {"name":"Laptoppppp","sku":"LAP-021"}
+2026-01-11 17:06:12 [[32minfo[39m] [66875684-5065-4eb5-93c5-22a270faac5e]: Request completed {"method":"POST","url":"/","statusCode":201,"duration":"18ms"}
+2026-01-11 17:06:22 [[32minfo[39m] [48b52545-8e08-4469-8a2a-49b81aeedba7]: Incoming request {"method":"POST","url":"/api/products","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 17:06:22 [[32minfo[39m]: Creating product {"name":"Laptoppp32454326pp","sku":"LAP-121"}
+2026-01-11 17:06:22 [[32minfo[39m] [48b52545-8e08-4469-8a2a-49b81aeedba7]: Request completed {"method":"POST","url":"/","statusCode":201,"duration":"56ms"}
+2026-01-11 17:06:35 [[32minfo[39m] [62fa1249-a702-4e28-b868-fc3b5fc7794f]: Incoming request {"method":"DELETE","url":"/api/3","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 17:06:35 [[33mwarn[39m] [62fa1249-a702-4e28-b868-fc3b5fc7794f]: Request completed {"method":"DELETE","url":"/api/3","statusCode":404,"duration":"2ms"}
+2026-01-11 17:06:45 [[32minfo[39m] [d8fd8a8c-1f7e-4547-997b-19d9bd8484be]: Incoming request {"method":"DELETE","url":"/api/products/3","ip":"::1","userAgent":"PostmanRuntime/7.51.0"}
+2026-01-11 17:06:45 [[32minfo[39m]: Product soft deleted {"productId":"3"}
+2026-01-11 17:06:45 [[32minfo[39m] [d8fd8a8c-1f7e-4547-997b-19d9bd8484be]: Request completed {"method":"DELETE","url":"/3","statusCode":200,"duration":"64ms"}
