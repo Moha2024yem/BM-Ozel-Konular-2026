@@ -127,10 +127,10 @@ POST /api/orders
 # Tüm testleri çalıştır
 npm test
 
-# Test sonuçları:
-# Test Suites: 5 passed, 1 failed, 6 total
-# Tests: 36 passed, 12 failed, 48 total
-# Coverage: %75 (Kabul edilebilir)
+Test Suites: 6 passed, 6 total                                                                                                                                                        
+Tests:       48 passed, 48 total
+Snapshots:   0 total
+Time:        8.251 s
 ```
 
 ---
