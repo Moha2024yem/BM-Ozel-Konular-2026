@@ -13,9 +13,10 @@ Bu proje kapsamlı dokümantasyona sahiptir. Detaylı bilgi için ilgili doküma
 | Doküman | Açıklama | Link |
 |---------|----------|------|
 | **Gereksinim Analizi** | Müşteri talepleri ve netleştirme süreci | [GEREKSINIM_ANALIZI.md](docs/GEREKSINIM_ANALIZI.md) |
-| **Mimari Tasarım** | Sistem mimarisi, veritabanı şeması, UML | [ MIMARI_TASARIM.md](docs/MIMARI_TASARIM.md) |
-| **API Dokümantasyonu** | Tüm endpoint'ler ve kullanım örnekleri | [ API.md](docs/API.md) |
-| **Veri Klasörü** | CSV import ve veri yönetimi | [ data/README.md](data/README.md) |
+| **Mimari Tasarım** | Sistem mimarisi, veritabanı şeması, UML | [MIMARI_TASARIM.md](docs/MIMARI_TASARIM.md) |
+| **API Dokümantasyonu** | Tüm endpoint'ler ve kullanım örnekleri | [API.md](docs/API.md) |
+| **Test Raporu** | Test sonuçları ve kapsam bilgisi | [TEST_RAPORU.md](docs/TEST_RAPORU.md) |
+| **Veri Klasörü** | CSV import ve veri yönetimi | [data/README.md](data/README.md) |
 
 ---
 
@@ -154,7 +155,11 @@ BM-Ozel-Konular-2026-2/
 │
 ├── api/                     # API klasörü (eski)
 ├── data/                    # CSV veri dosyaları (4 dosya)
+<<<<<<< HEAD
+├── docs/                    # Dokümantasyon (4 dosya)
+=======
 ├── docs/                    # Dokümantasyon (3 dosya)
+>>>>>>> b7cbf0e8ff34ecfb8a7f2f0deb5cdfe879574952
 │   ├── GEREKSINIM_ANALIZI.md
 │   ├── MIMARI_TASARIM.md
 │   └── API.md
