@@ -13,6 +13,7 @@ const requestLogger = require('./middleware/requestLogger');
 
 const customersRouter = require('./routes/customers');
 const ordersRouter = require('./routes/orders');
+const productsRouter = require('./routes/products');
 
 const app = express();
 
@@ -23,6 +24,7 @@ app.use(requestLogger);
 
 app.use('/api/customers', customersRouter);
 app.use('/api/orders', ordersRouter);
+app.use('/api/products', productsRouter);
 
 // 404 handler
 app.use((req, res) => {
