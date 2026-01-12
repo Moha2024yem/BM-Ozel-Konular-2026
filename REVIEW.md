@@ -39,3 +39,48 @@ Kritik Öneriler:
 2 Sipariş Detayları: Siparişlerin hangi ürünleri içerdiğini takip etmek için OrderItems tablosu eklenmeli.
 3 Dokümantasyon: API uçlarını test etmek için Swagger (OpenAPI) entegrasyonu yapılmalı.
 4 Soft Delete: Müşteri silme işleminde kullanılan isActive mantığı, tüm sorgularda (findAll vb.) varsayılan filtre olarak uygulanmalı.
+
+
+## CODE REVİEW
+
+Yapan: Burak Ünal 245172017
+
+
+PROJE ÖZETİ
+Bu proje, akademik kapsamda hazırlanmış, yazılım mühendisliği prensiplerini
+uygulamayı amaçlayan bir çalışmadır. Node.js tabanlı bir yapı ve modüler
+klasör organizasyonu hedeflenmiştir.
+
+GÜÇLÜ YÖNLER
+1. Düzenli klasör yapısı (src, tests, docs, migrations vb.)
+2. README.md ve REVIEW.md dosyalarının bulunması
+3. .env.example dosyası ile ortam değişkenlerinin ayrılması
+4. Migration yapısının kullanılması
+5. Akademik proje formatına uygunluk
+
+ZAYIF YÖNLER
+1. README içeriği teknik açıdan yeterince detaylı değil
+2. API endpoint açıklamaları ve örnekleri eksik
+3. Test kapsamı sınırlı veya belirsiz
+4. Merkezi hata yönetimi net değil
+5. Güvenlik ve kimlik doğrulama mekanizmaları eksik
+
+EKSİKLER
+- Swagger / OpenAPI dokümantasyonu
+- JWT veya benzeri authentication yapısı
+- CI/CD pipeline (GitHub Actions)
+- Kod standartlarını denetleyen ESLint / Prettier
+
+İYİLEŞTİRME ÖNERİLERİ
+- Request validation için Joi veya Zod kullanılması
+- Error handling middleware eklenmesi
+- Testlerin unit ve integration olarak ayrılması
+- GitHub Actions ile otomatik test çalıştırılması
+- README dosyasının teknik detaylarla zenginleştirilmesi
+
+GENEL DEĞERLENDİRME
+Bu proje, ders kapsamında iyi bir temel oluşturmaktadır.
+Eksiklerin giderilmesi halinde gerçek hayata daha yakın,
+bakımı kolay ve ölçeklenebilir bir yazılım haline getirilebilir.
+
+
