@@ -1,6 +1,6 @@
 # Code Review Form
 Hazırlayan
-Salih Kızılkaya
+Salih Kızılkaya Öğr No: 245172026
 
 Genel Mimari ve Yapı
 Proje, Node.js ve Express framework'ü kullanılarak geliştirilmiş, katmanlı bir mimariye (Routes -> Services -> Models) sahiptir. Bu yapı, iş mantığının (business logic) API uçlarından ayrılmasını sağlayarak kodun okunabilirliğini ve test edilebilirliğini artırmaktadır.
